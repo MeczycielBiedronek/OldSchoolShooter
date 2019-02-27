@@ -1,0 +1,26 @@
+
+.turnRed {
+    background-color: burlywood;
+    animation: turnSquare 0.5s, turnRed 3s;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes turnRed {
+    from {background-color: burlywood;}
+    to {background-color: red;}
+  }
+@keyframes turnSquare {
+    from {height: 0vh;}
+    to {height: 20vh;}
+  }
+  .exposion {
+    background-image: url(img/enemyexplo.png);
+  }
+  .makeOver {
+    animation: gameOver 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes gameOver {
+    from {  top: -100%;}
+    to {  top: 0;}
+  }

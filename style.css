@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    
+}
+h1 {
+    padding-top: 1rem;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3rem;
+}
+h2 {
+    padding-top: 1rem;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2rem;
+}
+h2 > span {
+    font-size: 5rem;
+}
+p {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3rem;
+}
+.action {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: burlywood;
+}
+.enemy_window {
+    display: block;
+    width: 20vh;
+    position: absolute;
+}
+#window1 {
+    bottom: 60vh;
+    left: 10vw;
+}
+#window2 {
+    bottom: 60vh;
+    left: 40vw;
+}
+#window3 {
+    bottom: 60vh;
+    left: 70vw;
+}
+#window4 {
+    bottom: 40%;
+    left: 30vw;
+
+}
+#window5 {
+    bottom: 40vh;
+    left: 60vw;
+}
+.enemy {
+    background-image: url(img/enemy.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+.kill {
+    background-image: url(img/explo.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+.gameOver {
+    color: white;
+    display: block;
+    position: absolute;
+    border-radius: 20px;
+    top: -100%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
