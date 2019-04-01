@@ -4,10 +4,19 @@
 body {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
+    overflow: hidden;
+    cursor: none;
     
 }
+.curs {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background-image:url(img/cur.svg);
+    pointer-events: none;
+    z-index: 9999;
+}
 h1 {
-    padding-top: 1rem;
     font-family: 'Luckiest Guy', cursive;
     font-size: 3rem;
 }
@@ -28,11 +37,24 @@ p {
     width: 100vw;
     height: 100vh;
     background: burlywood;
+   
 }
 .enemy_window {
     display: block;
     width: 20vh;
     position: absolute;
+}
+.enemy_window::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -80px;
+    width:20vh;
+    height: 100px;
+    background-image: url(img/baricade.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
 }
 #window1 {
     bottom: 60vh;
@@ -40,7 +62,7 @@ p {
 }
 #window2 {
     bottom: 60vh;
-    left: 40vw;
+    left: 40vw;f
 }
 #window3 {
     bottom: 60vh;
@@ -56,7 +78,14 @@ p {
     left: 60vw;
 }
 .enemy {
+    will-change: auto;
     background-image: url(img/enemy.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+.hostage {
+    background-image: url(img/hostage.jpg);
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center; 
@@ -81,4 +110,15 @@ p {
     flex-direction: column;
   align-items: center;
   justify-content: center
+}
+.restart {
+    display: block;
+    padding: 12px;
+    background-color: black;
+    margin-top: 2rem;
+    border-radius: 12px;
+}
+.restart:hover {
+    background-color: white;
+    color: red;
 }

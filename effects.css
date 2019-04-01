@@ -1,10 +1,15 @@
 
 .turnRed {
+    will-change: auto;
     background-color: burlywood;
     animation: turnSquare 0.5s, turnRed 3s;
     animation-fill-mode: forwards;
   }
-
+.turnGreen {
+    background-color: burlywood;
+    animation: turnSquare 0.5s, turnGreen 3s;
+    animation-fill-mode: forwards;
+  }
 @keyframes turnRed {
     from {background-color: burlywood;}
     to {background-color: red;}
@@ -12,6 +17,10 @@
 @keyframes turnSquare {
     from {height: 0vh;}
     to {height: 20vh;}
+  }
+@keyframes turnGreen {
+    from {background-color: burlywood;}
+    to {background-color: lightgreen;}
   }
   .exposion {
     background-image: url(img/enemyexplo.png);
